@@ -1,9 +1,10 @@
 <template>
   <div class="main">
+    <img class="xnogi-logo" src="~/assets/icons/xnogi.png" width="260" alt="">
     <div class="cards">
       <VaCard>
         <VaCardTitle>Смотреть</VaCardTitle>
-        <VaCardContent> </VaCardContent>
+        <VaCardContent> <span style="color: #000"> Заблокировано </span> </VaCardContent>
       </VaCard>
       <VaCard>
         <VaCardTitle>Обрести</VaCardTitle>
@@ -19,7 +20,7 @@
       </VaCard>
       <VaCard>
         <VaCardTitle>Изучить</VaCardTitle>
-        <VaCardContent> </VaCardContent>
+        <VaCardContent> <span style="color: #000"> Заблокировано </span> </VaCardContent>
       </VaCard>
     </div>
   </div>
@@ -43,6 +44,10 @@ export default {
   z-index: -1;
   background: linear-gradient(180deg, #1f1f1f, #060606 60%);
   overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 .main::before {
   content: "";
@@ -67,6 +72,10 @@ export default {
   mix-blend-mode: screen;
   animation: floatSpots 18s infinite linear;
   opacity: 0.95;
+}
+
+.xnogi-logo {
+  filter: drop-shadow(2px 4px 16px #fff)
 }
 
 @keyframes floatSpots {
