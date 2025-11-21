@@ -92,7 +92,7 @@ export default {
 // }
 
 .xnogi-logo {
-  filter: drop-shadow(2px 4px 16px #fff)
+  filter: drop-shadow(2px 4px 16px #82f64c)
 }
 
 @keyframes floatSpots {
