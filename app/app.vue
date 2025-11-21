@@ -1,6 +1,6 @@
 <template>
   <div class="main">
-    <img class="bg" src="~/assets/images/background.png" alt="">
+    <img class="bg" src="~/assets/images/background.webp" alt="">
     <img class="xnogi-logo" src="~/assets/icons/xnogi.png" width="260" alt="">
     <div class="cards">
       <VaCard>
