@@ -1,5 +1,6 @@
 <template>
   <div class="main">
+    <img class="bg" src="~/assets/images/background.png" alt="">
     <img class="xnogi-logo" src="~/assets/icons/xnogi.png" width="260" alt="">
     <div class="cards">
       <VaCard>
@@ -37,42 +38,58 @@ export default {
 <style scoped lang="scss">
 
 .main {
+  position: relative;
   height: 100vh;
   align-content: center;
   position: fixed;
   inset: 0;
   z-index: -1;
-  background: linear-gradient(180deg, #1f1f1f, #060606 60%);
+  // background: linear-gradient(180deg, #1f1f1f, #060606 60%);
   overflow: hidden;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  // background-image: url(~/assets/images/background.png);
+  // background-position: top;
+  // background-repeat: no-repeat;
+  // background-size: cover;
 }
-.main::before {
-  content: "";
+
+.bg {
   position: absolute;
-  inset: -20%; /* делаем большой слой для плавности */
-  background: radial-gradient(
-      circle at 20% 30%,
-      rgba(255, 255, 255, 0.06) 0 140px,
-      transparent 200px
-    ),
-    radial-gradient(
-      circle at 70% 15%,
-      rgba(255, 255, 255, 0.088) 0 120px,
-      transparent 170px
-    ),
-    radial-gradient(
-      circle at 40% 75%,
-      rgba(255, 255, 255, 0.04) 0 160px,
-      transparent 220px
-    );
-  filter: blur(20px);
-  mix-blend-mode: screen;
-  animation: floatSpots 18s infinite linear;
-  opacity: 0.95;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top;
+  filter: brightness(0.2);
 }
+// .main::before {
+//   content: "";
+//   position: absolute;
+//   inset: -20%; /* делаем большой слой для плавности */
+//   background: radial-gradient(
+//       circle at 20% 30%,
+//       rgba(255, 255, 255, 0.06) 0 140px,
+//       transparent 200px
+//     ),
+//     radial-gradient(
+//       circle at 70% 15%,
+//       rgba(255, 255, 255, 0.088) 0 120px,
+//       transparent 170px
+//     ),
+//     radial-gradient(
+//       circle at 40% 75%,
+//       rgba(255, 255, 255, 0.04) 0 160px,
+//       transparent 220px
+//     );
+//   filter: blur(20px);
+//   mix-blend-mode: screen;
+//   animation: floatSpots 18s infinite linear;
+//   opacity: 0.95;
+// }
 
 .xnogi-logo {
   filter: drop-shadow(2px 4px 16px #fff)
