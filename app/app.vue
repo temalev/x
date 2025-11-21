@@ -4,7 +4,7 @@
     <div class="cards">
       <VaCard>
         <VaCardTitle>Смотреть</VaCardTitle>
-        <VaCardContent> <span style="color: #000"> Заблокировано </span> </VaCardContent>
+        <VaCardContent> <span style="color: #000"> Не разблокировано </span> </VaCardContent>
       </VaCard>
       <VaCard>
         <VaCardTitle>Обрести</VaCardTitle>
@@ -20,7 +20,7 @@
       </VaCard>
       <VaCard>
         <VaCardTitle>Изучить</VaCardTitle>
-        <VaCardContent> <span style="color: #000"> Заблокировано </span> </VaCardContent>
+        <VaCardContent> <span style="color: #000"> Не разблокировано </span> </VaCardContent>
       </VaCard>
     </div>
   </div>
