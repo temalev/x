@@ -26,7 +26,7 @@ export default defineNuxtConfig({
         },
         {
           property: 'og:image',
-          content: '~/assets/images/background.webp'
+          content: '/background.webp'
         },
         { property: 'og:type', content: 'website' },
         { property: 'og:site_name', content: 'ИксНоги' }
