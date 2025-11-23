@@ -24,6 +24,11 @@
         <VaCardContent> <span style="color: #000"> Не разблокировано </span> </VaCardContent>
       </VaCard>
     </div>
+    <VaButton round color="#fff" class="mt-5 p-2" preset="primary" @click="openUrl('https://t.me/+VFsKQjhg1Y9lODY6')"> 
+      Общаемся все тут
+      <img class="ml-3 " src="~/assets/icons/tg.webp" width="20" alt=""> 
+    </VaButton>
+
   </div>
 </template>
 <script>
