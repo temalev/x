@@ -6,6 +6,15 @@
       color="#fff"
       class="mt-5 p-2"
       preset="primary"
+      @click="isStory = true"
+    >
+      Легенда об ИксНоги
+    </VaButton>
+    <VaButton
+      round
+      color="#fff"
+      class="mt-5 p-2"
+      preset="primary"
       @click="openUrl('https://t.me/+VFsKQjhg1Y9lODY6')"
     >
       Общаемся все тут
@@ -58,17 +67,63 @@
         </VaCardContent>
       </VaCard>
     </div>
+
+    <el-dialog v-model="isStory" title="Легенда об ИксНоги" width="500">
+      <div class="story-content">
+        <p>
+          В бесконечном Межпространстве, где рождается энергия и формы,
+          появились Иксноги. Они не были существами в привычном смысле — это
+          были сущности силы, созданные для того, чтобы помогать и защищать. Но
+          их энергия была слишком велика для нематериального мира, и потому
+          Создатель заключил её в физические оболочки. Так Иксноги стали
+          артефактами — амулетами и талисманами, каждый со своими уникальными
+          свойствами.
+        </p>
+
+        <p>
+          Одни защищают от зла, другие приносят удачу, третьи дарят вдохновение
+          и силу двигаться вперёд.
+        </p>
+
+        <p>
+          Но истинная мощь Иксноги раскроется не сразу. Секреты будут
+          проявляться постепенно — через истории, комиксы, игры и обновления,
+          которые появляются в наших социальных сетях.
+        </p>
+
+        <p>
+          Каждый новый символ, каждая новая глава — это ключ к новым функциям
+          твоего Иксноги. Собирая разных персонажей, ты сможешь соединять их
+          способности, усиливать талисманы и открывать скрытые тайны вселенной.
+        </p>
+
+        <p>
+          В будущем твои Иксноги будут получать апгрейды, артефакты, новые формы
+          и даже возможность участвовать в играх, где проявится их полная сила.
+        </p>
+      </div>
+      <template #footer>
+        <div class="dialog-footer">
+          <el-button @click="isStory = false">Закрыть</el-button>
+        </div>
+      </template>
+    </el-dialog>
   </div>
 </template>
 
 <script>
 export default {
+  data() {
+    return {
+      isStory: false,
+    };
+  },
   methods: {
     openUrl(link) {
-      window.open(link)
+      window.open(link);
     },
   },
-}
+};
 </script>
 
 <style scoped lang="scss">
@@ -118,12 +173,49 @@ export default {
   color: #fff !important;
 }
 
+.story-content {
+  line-height: 1.7;
+  max-width: 600px;
+  color: #cdcdcd;
+
+  p {
+    margin-bottom: 1.2em;
+    text-align: justify;
+    font-size: 15px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}
+
+::v-deep {
+  .el-dialog__title {
+    color: #fff !important;
+  }
+  .el-dialog {
+    background: linear-gradient(
+      135deg,
+      rgba(255, 255, 255, 0.076),
+      rgba(255, 255, 255, 0.08)
+    ) !important;
+    backdrop-filter: blur(22px) saturate(200%);
+    -webkit-backdrop-filter: blur(22px) saturate(200%);
+    width: fit-content;
+  }
+}
+
 @media (max-width: 500px) {
   .cards {
     flex-direction: column;
     margin: 0 20px;
   }
+
+  .story-content {
+    p {
+      font-size: 14px;
+      text-align: left;
+    }
+  }
 }
 </style>
-
-
