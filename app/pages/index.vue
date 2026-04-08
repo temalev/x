@@ -20,6 +20,19 @@
       Общаемся все тут
       <img class="ml-3" src="~/assets/icons/tg.webp" width="20" alt="" />
     </VaButton>
+    <VaButton
+      round
+      color="#fff"
+      class="mt-5 p-2"
+      preset="primary"
+      @click="
+                openUrl(
+                  'mailto:xrvlux@gmail.com?subject=%D0%A1%D0%B0%D0%BC%D0%B0%D1%8F%20%D0%B2%D1%8B%D0%B3%D0%BE%D0%B4%D0%BD%D0%B0%D1%8F%20%D1%86%D0%B5%D0%BD%D0%B0&body=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5!%20%D0%9F%D0%BE%D0%B4%D1%81%D0%BA%D0%B0%D0%B6%D0%B8%D1%82%D0%B5%2C%20%D0%BF%D0%BE%D0%B6%D0%B0%D0%BB%D1%83%D0%B9%D1%81%D1%82%D0%B0%2C%20%D1%81%D0%B0%D0%BC%D1%83%D1%8E%20%D0%B2%D1%8B%D0%B3%D0%BE%D0%B4%D0%BD%D1%83%D1%8E%20%D1%86%D0%B5%D0%BD%D1%83.'
+                )
+              "
+    >
+      Связаться
+    </VaButton>
     <div class="cards mt-5">
       <VaCard>
         <VaCardTitle>Смотреть</VaCardTitle>
@@ -30,9 +43,10 @@
       <VaCard>
         <VaCardTitle>Обрести</VaCardTitle>
         <VaCardContent>
-          <div class="d-flex gap-2">
+          <div class="market-buttons">
             <VaButton
               color="#fff"
+              class="marketplace-button"
               @click="
                 openUrl(
                   'https://www.ozon.ru/seller/iksnogi-2176847/?miniapp=seller_2176847'
@@ -43,6 +57,7 @@
             </VaButton>
             <VaButton
               color="#fff"
+              class="marketplace-button"
               @click="
                 openUrl(
                   'https://www.avito.ru/user/9269a0adb628f98c3f1935e13c21af3f/profile?src=sharing'
@@ -53,9 +68,39 @@
             </VaButton>
             <VaButton
               color="#fff"
+              class="marketplace-button"
               @click="openUrl('https://www.wildberries.ru/seller/250041580')"
             >
               <img src="~/assets/icons/wb.svg" width="60" alt="" />
+            </VaButton>
+            <VaButton
+              color="#fff"
+              class="seller-contact-button"
+              @click="
+                openUrl(
+                  'mailto:xrvlux@gmail.com?subject=%D0%A1%D0%B0%D0%BC%D0%B0%D1%8F%20%D0%B2%D1%8B%D0%B3%D0%BE%D0%B4%D0%BD%D0%B0%D1%8F%20%D1%86%D0%B5%D0%BD%D0%B0&body=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5!%20%D0%9F%D0%BE%D0%B4%D1%81%D0%BA%D0%B0%D0%B6%D0%B8%D1%82%D0%B5%2C%20%D0%BF%D0%BE%D0%B6%D0%B0%D0%BB%D1%83%D0%B9%D1%81%D1%82%D0%B0%2C%20%D1%81%D0%B0%D0%BC%D1%83%D1%8E%20%D0%B2%D1%8B%D0%B3%D0%BE%D0%B4%D0%BD%D1%83%D1%8E%20%D1%86%D0%B5%D0%BD%D1%83.'
+                )
+              "
+            >
+              <div class="seller-contact-button__inner">
+                <svg
+                  class="seller-contact-button__icon"
+                  viewBox="0 0 24 24"
+                  aria-hidden="true"
+                  focusable="false"
+                >
+                  <path
+                    fill="currentColor"
+                    d="M20 4H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2Zm0 4.25-7.4 4.62a1.2 1.2 0 0 1-1.2 0L4 8.25V6.9l7.9 4.94L20 6.9v1.35Z"
+                  />
+                </svg>
+                <div class="seller-contact-button__text">
+                  <div class="seller-contact-button__title">Написать продавцу</div>
+                  <div class="seller-contact-button__subtitle">
+                    самая выгодная цена
+                  </div>
+                </div>
+              </div>
             </VaButton>
           </div>
         </VaCardContent>
@@ -206,9 +251,20 @@ export default {
 }
 
 @media (max-width: 500px) {
+  .main {
+    padding-bottom: 24px;
+  }
+
   .cards {
     flex-direction: column;
-    margin: 0 20px;
+    margin: 0;
+    width: 100%;
+    padding: 0 20px;
+    box-sizing: border-box;
+  }
+
+  .va-card {
+    width: 100%;
   }
 
   .story-content {
@@ -217,5 +273,104 @@ export default {
       text-align: left;
     }
   }
+
+  .market-buttons {
+    flex-direction: column;
+    align-items: stretch;
+    flex-wrap: nowrap !important;
+    gap: 10px !important;
+  }
+
+  .marketplace-button {
+    height: 56px;
+    padding: 0;
+    width: 100%;
+    justify-content: center;
+  }
+
+  .seller-contact-button {
+    width: 100% !important;
+    justify-content: center !important;
+  }
+
+  .seller-contact-button__text {
+    text-align: center;
+  }
+
+  .seller-contact-button__title,
+  .seller-contact-button__subtitle {
+    white-space: normal;
+  }
+}
+
+.market-buttons {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  flex-wrap: nowrap;
+}
+
+.marketplace-button {
+  padding: 0;
+  min-width: 64px;
+  height: 56px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.88),
+    rgba(245, 250, 255, 0.88)
+  ) !important;
+  border: 1px solid rgba(0, 0, 0, 0.06) !important;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12) !important;
+}
+
+.seller-contact-button {
+  height: 56px;
+  padding: 0 14px;
+  display: inline-flex;
+  align-items: center;
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.88),
+    rgba(245, 250, 255, 0.88)
+  ) !important;
+  border: 1px solid rgba(0, 0, 0, 0.06) !important;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12) !important;
+}
+
+.seller-contact-button__inner {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.seller-contact-button__icon {
+  width: 22px;
+  height: 22px;
+  object-fit: contain;
+  color: #000;
+}
+
+.seller-contact-button__text {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.15;
+  text-align: left;
+}
+
+.seller-contact-button__title {
+  color: #000;
+  font-weight: 600;
+  font-size: 13px;
+  white-space: nowrap;
+}
+
+.seller-contact-button__subtitle {
+  color: #000;
+  opacity: 0.7;
+  font-size: 12px;
+  white-space: nowrap;
 }
 </style>
