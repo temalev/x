@@ -6,6 +6,15 @@
       color="#fff"
       class="mt-5 p-2"
       preset="primary"
+      @click="openUrl('https://remix.gg/g/66e7212a-9f5f-4ec3-9a54-b9c0364166b9?ref=D816A0E081')"
+    >
+      Играть (Демо)
+    </VaButton>
+    <VaButton
+      round
+      color="#fff"
+      class="mt-5 p-2"
+      preset="primary"
       @click="isStory = true"
     >
       Легенда об ИксНоги
