@@ -43,48 +43,14 @@
       <VaCard>
         <VaCardTitle>Обрести</VaCardTitle>
         <VaCardContent>
-          <div class="market-buttons">
-            <VaButton
-              color="#fff"
-              class="marketplace-button"
-              @click="
-                openUrl(
-                  'https://www.ozon.ru/seller/iksnogi-2176847/?miniapp=seller_2176847'
-                )
-              "
+          <div class="acquire-buttons">
+            <a
+              class="acquire-button acquire-button--contact"
+              href="mailto:xrvlux@gmail.com?subject=%D0%A1%D0%B0%D0%BC%D0%B0%D1%8F%20%D0%B2%D1%8B%D0%B3%D0%BE%D0%B4%D0%BD%D0%B0%D1%8F%20%D1%86%D0%B5%D0%BD%D0%B0&body=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5!%20%D0%9F%D0%BE%D0%B4%D1%81%D0%BA%D0%B0%D0%B6%D0%B8%D1%82%D0%B5%2C%20%D0%BF%D0%BE%D0%B6%D0%B0%D0%BB%D1%83%D0%B9%D1%81%D1%82%D0%B0%2C%20%D1%81%D0%B0%D0%BC%D1%83%D1%8E%20%D0%B2%D1%8B%D0%B3%D0%BE%D0%B4%D0%BD%D1%83%D1%8E%20%D1%86%D0%B5%D0%BD%D1%83."
             >
-              <img src="~/assets/icons/ozon.svg" width="60" alt="" />
-            </VaButton>
-            <VaButton
-              color="#fff"
-              class="marketplace-button"
-              @click="
-                openUrl(
-                  'https://www.avito.ru/user/9269a0adb628f98c3f1935e13c21af3f/profile?src=sharing'
-                )
-              "
-            >
-              <img src="~/assets/icons/avito_logo.svg" width="60" alt="" />
-            </VaButton>
-            <VaButton
-              color="#fff"
-              class="marketplace-button"
-              @click="openUrl('https://www.wildberries.ru/seller/250041580')"
-            >
-              <img src="~/assets/icons/wb.svg" width="60" alt="" />
-            </VaButton>
-            <VaButton
-              color="#fff"
-              class="seller-contact-button"
-              @click="
-                openUrl(
-                  'mailto:xrvlux@gmail.com?subject=%D0%A1%D0%B0%D0%BC%D0%B0%D1%8F%20%D0%B2%D1%8B%D0%B3%D0%BE%D0%B4%D0%BD%D0%B0%D1%8F%20%D1%86%D0%B5%D0%BD%D0%B0&body=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5!%20%D0%9F%D0%BE%D0%B4%D1%81%D0%BA%D0%B0%D0%B6%D0%B8%D1%82%D0%B5%2C%20%D0%BF%D0%BE%D0%B6%D0%B0%D0%BB%D1%83%D0%B9%D1%81%D1%82%D0%B0%2C%20%D1%81%D0%B0%D0%BC%D1%83%D1%8E%20%D0%B2%D1%8B%D0%B3%D0%BE%D0%B4%D0%BD%D1%83%D1%8E%20%D1%86%D0%B5%D0%BD%D1%83.'
-                )
-              "
-            >
-              <div class="seller-contact-button__inner">
+              <span class="acquire-button__inner">
                 <svg
-                  class="seller-contact-button__icon"
+                  class="acquire-button__icon"
                   viewBox="0 0 24 24"
                   aria-hidden="true"
                   focusable="false"
@@ -94,14 +60,40 @@
                     d="M20 4H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2Zm0 4.25-7.4 4.62a1.2 1.2 0 0 1-1.2 0L4 8.25V6.9l7.9 4.94L20 6.9v1.35Z"
                   />
                 </svg>
-                <div class="seller-contact-button__text">
-                  <div class="seller-contact-button__title">Написать продавцу</div>
-                  <div class="seller-contact-button__subtitle">
-                    самая выгодная цена
-                  </div>
-                </div>
-              </div>
-            </VaButton>
+                <span class="acquire-button__text">
+                  <span class="acquire-button__title">Написать продавцу</span>
+                  <span class="acquire-button__subtitle">самая выгодная цена</span>
+                </span>
+              </span>
+            </a>
+            <a
+              class="acquire-button acquire-button--icon"
+              href="https://www.ozon.ru/seller/iksnogi-2176847/?miniapp=seller_2176847"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Ozon"
+            >
+              <img src="~/assets/icons/ozon.svg" alt="Ozon" />
+            </a>
+            <a
+              class="acquire-button acquire-button--icon"
+              href="https://www.avito.ru/user/9269a0adb628f98c3f1935e13c21af3f/profile?src=sharing"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Avito"
+            >
+              <img src="~/assets/icons/avito_logo.svg" alt="Avito" />
+            </a>
+            <a
+              class="acquire-button acquire-button--icon"
+              href="https://www.wildberries.ru/seller/250041580"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Wildberries"
+            >
+              <img src="~/assets/icons/wb.svg" alt="Wildberries" />
+            </a>
+
           </div>
         </VaCardContent>
       </VaCard>
@@ -251,6 +243,15 @@ export default {
 }
 
 @media (max-width: 500px) {
+  .acquire-button--icon {
+    width: 100% !important;
+    min-width: 0 !important;
+  }
+
+  .acquire-button--icon img {
+    width: 40px;
+    height: 40px;
+  }
   .main {
     padding-bottom: 24px;
   }
@@ -274,100 +275,166 @@ export default {
     }
   }
 
-  .market-buttons {
-    flex-direction: column;
-    align-items: stretch;
-    flex-wrap: nowrap !important;
-    gap: 10px !important;
-  }
-
-  .marketplace-button {
-    height: 56px;
-    padding: 0;
-    width: 100%;
-    justify-content: center;
-  }
-
-  .seller-contact-button {
+  .acquire-buttons {
     width: 100% !important;
-    justify-content: center !important;
+    display: grid !important;
+    grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+    align-items: stretch;
   }
 
-  .seller-contact-button__text {
+  .acquire-button--contact {
+    grid-column: 1 / -1;
+    justify-content: center;
+    width: 100% !important;
+    min-width: 0 !important;
+  }
+
+  .acquire-button__text {
     text-align: center;
   }
 
-  .seller-contact-button__title,
-  .seller-contact-button__subtitle {
+  .acquire-button__title,
+  .acquire-button__subtitle {
     white-space: normal;
   }
 }
 
-.market-buttons {
+.acquire-buttons {
   display: flex;
+  width: fit-content;
   gap: 10px;
-  align-items: center;
-  flex-wrap: nowrap;
+  align-items: stretch;
 }
 
-.marketplace-button {
-  padding: 0;
-  min-width: 64px;
-  height: 56px;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  background: linear-gradient(
-    135deg,
-    rgba(255, 255, 255, 0.88),
-    rgba(245, 250, 255, 0.88)
-  ) !important;
-  border: 1px solid rgba(0, 0, 0, 0.06) !important;
-  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12) !important;
-}
-
-.seller-contact-button {
+.acquire-button {
   height: 56px;
   padding: 0 14px;
   display: inline-flex;
   align-items: center;
+  justify-content: center;
+  border-radius: 12px;
+  text-decoration: none;
+  user-select: none;
+  -webkit-tap-highlight-color: transparent;
+  position: relative;
+  overflow: hidden;
+  box-sizing: border-box;
+  min-width: 56px;
+
   background: linear-gradient(
     135deg,
-    rgba(255, 255, 255, 0.88),
-    rgba(245, 250, 255, 0.88)
-  ) !important;
-  border: 1px solid rgba(0, 0, 0, 0.06) !important;
-  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12) !important;
+    rgba(255, 255, 255, 0.081),
+    rgba(231, 247, 255, 0.54) 45%,
+    rgba(255, 255, 255, 0.366)
+  );
+  border: 1px solid rgba(255, 255, 255, 0.55);
+  box-shadow:
+    0 10px 24px rgba(0, 0, 0, 0.14),
+    inset 0 1px 0 rgba(255, 255, 255, 0.55);
+  backdrop-filter: blur(14px) saturate(175%);
+  -webkit-backdrop-filter: blur(14px) saturate(175%);
+
+  transition:
+    transform 140ms ease,
+    box-shadow 140ms ease,
+    border-color 140ms ease;
 }
 
-.seller-contact-button__inner {
+.acquire-button::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(
+      120px 60px at 20% 15%,
+      rgba(255, 255, 255, 0.75),
+      rgba(255, 255, 255, 0) 60%
+    ),
+    linear-gradient(
+      180deg,
+      rgba(255, 255, 255, 0.25),
+      rgba(255, 255, 255, 0)
+    );
+  opacity: 0.9;
+  pointer-events: none;
+}
+
+.acquire-button > * {
+  position: relative;
+  z-index: 1;
+}
+
+.acquire-button:hover {
+  background: linear-gradient(
+    135deg,
+    rgba(231, 247, 255, 0.738) 45%,
+    rgba(255, 255, 255, 0.471),
+    rgba(255, 255, 255, 0.508)
+  );
+  transform: translateY(-1px);
+  box-shadow:
+    0 14px 30px rgba(0, 0, 0, 0.16),
+    inset 0 1px 0 rgba(255, 255, 255, 0.7);
+  border-color: rgba(255, 255, 255, 0.75);
+}
+
+.acquire-button:active {
+  transform: translateY(0);
+  box-shadow:
+    0 10px 24px rgba(0, 0, 0, 0.14),
+    inset 0 1px 0 rgba(255, 255, 255, 0.55);
+}
+
+.acquire-button:focus-visible {
+  outline: 2px solid rgba(130, 246, 76, 0.7);
+  outline-offset: 2px;
+}
+
+.acquire-button--icon {
+  padding: 0;
+  width: 64px;
+  min-width: 64px;
+}
+
+.acquire-button--icon img {
+  width: 44px;
+  height: 44px;
+  object-fit: contain;
+}
+
+.acquire-button--contact {
+  justify-content: flex-start;
+  min-width: 240px;
+}
+
+.acquire-button__inner {
   display: flex;
   align-items: center;
   gap: 10px;
 }
 
-.seller-contact-button__icon {
+.acquire-button__icon {
   width: 22px;
   height: 22px;
-  object-fit: contain;
   color: #000;
+  flex: 0 0 auto;
 }
 
-.seller-contact-button__text {
+.acquire-button__text {
   display: flex;
   flex-direction: column;
   line-height: 1.15;
   text-align: left;
 }
 
-.seller-contact-button__title {
+.acquire-button__title {
   color: #000;
   font-weight: 600;
   font-size: 13px;
   white-space: nowrap;
 }
 
-.seller-contact-button__subtitle {
+.acquire-button__subtitle {
   color: #000;
   opacity: 0.7;
   font-size: 12px;
