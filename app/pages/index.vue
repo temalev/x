@@ -54,28 +54,6 @@
         <VaCardContent>
           <div class="acquire-buttons">
             <a
-              class="acquire-button acquire-button--contact"
-              href="mailto:xrvlux@gmail.com?subject=%D0%A1%D0%B0%D0%BC%D0%B0%D1%8F%20%D0%B2%D1%8B%D0%B3%D0%BE%D0%B4%D0%BD%D0%B0%D1%8F%20%D1%86%D0%B5%D0%BD%D0%B0&body=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5!%20%D0%9F%D0%BE%D0%B4%D1%81%D0%BA%D0%B0%D0%B6%D0%B8%D1%82%D0%B5%2C%20%D0%BF%D0%BE%D0%B6%D0%B0%D0%BB%D1%83%D0%B9%D1%81%D1%82%D0%B0%2C%20%D1%81%D0%B0%D0%BC%D1%83%D1%8E%20%D0%B2%D1%8B%D0%B3%D0%BE%D0%B4%D0%BD%D1%83%D1%8E%20%D1%86%D0%B5%D0%BD%D1%83."
-            >
-              <span class="acquire-button__inner">
-                <svg
-                  class="acquire-button__icon"
-                  viewBox="0 0 24 24"
-                  aria-hidden="true"
-                  focusable="false"
-                >
-                  <path
-                    fill="currentColor"
-                    d="M20 4H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2Zm0 4.25-7.4 4.62a1.2 1.2 0 0 1-1.2 0L4 8.25V6.9l7.9 4.94L20 6.9v1.35Z"
-                  />
-                </svg>
-                <span class="acquire-button__text">
-                  <span class="acquire-button__title">Написать продавцу</span>
-                  <span class="acquire-button__subtitle">самая выгодная цена</span>
-                </span>
-              </span>
-            </a>
-            <a
               class="acquire-button acquire-button--icon"
               href="https://www.ozon.ru/seller/iksnogi-2176847/?miniapp=seller_2176847"
               target="_blank"
